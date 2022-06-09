@@ -1,0 +1,16 @@
+I have only implemented the criteria provided in the problem statement.
+
+I attempted to use a "url score" based on how secure the links present in each
+email are, but this takes way too long and I end up getting TLE when running the
+checker. My idea was to increase the score based on 2 factors: whether the site
+was using https and whether they ended up redirecting the user to another
+domain.
+
+Keywords are stored in a list, while spammer addresses and scores are stored in
+a dictionary.
+
+Each email is split into lines and the various scores are calculated.
+
+Finally, the standard deviation is calculated for each keyword and a prediction
+is made as to weather the email is spam or not. I have slightly adjusted the
+coefficients of each score to get a higher F1 score.
